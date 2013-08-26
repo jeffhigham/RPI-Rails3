@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="large-8 large-centered columns">
+<%= form_for @survey_user, :html => {:class => "custom", :'data-abide' => "true"} do |f| %>
+  <% if @survey_user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @survey_user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="small-10 small-centered columns">
+  <div class="name-field">
+    <label >First Name <small>required</small></label><br/>
+    <%= f.text_field :first_name, :"required" => "true", :'placeholder' => "Joe" %>
+    <small class="error">Please provide your first name.</small>
+  </div>
+  <div class="field">
+    <label >Last Name</label><br/>
+    <%= f.text_field :last_name, :'placeholder' => "Winner" %>
+  </div>
+  <div class="field">
+    <label>Email <small>required</small></label><br/>
+    <%= f.text_field :email, :"required" => "true", :"pattern" => "email", :'placeholder' => "joe@email.com"  %>
+    <small class="error">Provide a valid email address.</small>
+  </div>
+
+  <div class="field">
+    <label>Phone</label><br/>
+    <%= f.text_field :phone, :'placeholder' => "(555) 867-5309" %>
+  </div>
+  <a href="javascript:$('form').submit()" class="radius button success" style="width: 100%">Get Started!</a>
+
+</div>
+</div>
+<% end %>
+</div>
+</div>

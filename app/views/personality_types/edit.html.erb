@@ -1,0 +1,17 @@
+<script type="text/javascript" src="/javascripts/tinymce.min.js"></script>
+
+<div class="row">
+<div class="lage-10 columns">
+<%= render 'form' %>
+<%= link_to 'Show', personality_type_path(@personality_type), :class => "radius button" %> 
+<%= link_to 'Back', personality_types_path, :class => "radius button" %>
+</div>
+</div>
+<script type="text/javascript">
+tinymce.init({
+    selector: "#personality_type_message",
+    plugins: "preview",
+    plugins: "table",
+    toolbar: "undo redo | styleselect | bold italic | link image | hr | table | preview"
+ });
+</script>
