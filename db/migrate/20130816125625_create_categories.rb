@@ -3,7 +3,7 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :name
       t.string :title
-      t.string :message
+      t.text :message
 
       t.timestamps
     end
