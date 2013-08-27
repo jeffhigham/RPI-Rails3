@@ -6,6 +6,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+# gem 'mysql2'
 
 gem 'json'
 
@@ -20,7 +21,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'zurb-foundation','~>4.3.0'
-	gem 'foundation-icons-sass-rails'
+  gem 'foundation-icons-sass-rails'
+  gem 'compass-rails'
 end
 
 # group :development do

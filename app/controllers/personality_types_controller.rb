@@ -44,8 +44,9 @@ class PersonalityTypesController < ApplicationController
   # PATCH/PUT /personality_types/1
   # PATCH/PUT /personality_types/1.json
   def update
+    @personality_type = PersonalityType.find(params[:id])
     respond_to do |format|
-      if @personality_type.update(params[:personality_type])
+      if @personality_type.update_attributes(params[:personality_type])
         format.html { redirect_to personality_types_url, :notice => 'PersonalityType was successfully updated.' }
         format.json { head :no_content }
       else

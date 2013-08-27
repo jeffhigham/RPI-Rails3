@@ -34,55 +34,56 @@
 <!-- personality types -->
 
    <div class="row hide-for-small" >
-    <h4>RPI's 16 Personality Types</h4><hr/>
-    <div class="large-12 columns" style="height:250px; overflow:scroll">
+    
+    <div class="large-12 large-centered columns text-center">
+      <h4 style='font-family: "Trajan Pro"; letter-spacing: 4px; '>WHAT IS YOUR RAW PERSONALITY TYPE?</h4><br/>
 
-      <div class="row">
+      <ul data-orbit data-options="timer_speed:5000; slide_number: false; bullets: false; timer: true;">
+        <li>
+          
+          <% @personalty_types[0..3].each do |p| %>
+          <div class="large-3 columns personality-main" >
+            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <div  style="font-size: 10px"><%= p.title %></div>
+          </div>
+          <% end %>
         
-        <% @personalty_types[0..3].each do |p| %>
-        <div class="large-3 columns text-center" >
-          <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
-          <div class="panel text-center" style="font-size: 12px"><%= p.title %></div>
-        </div>
-        <% end %>
-      
-      </div>
+        </li>
 
-      <div class="row">
+        <li>
+          
+          <% @personalty_types[4..7].each do |p| %>
+          <div class="large-3 columns personality-main">
+            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <div class="text-center"><%= p.title %></div>
+          </div>
+          <% end %>
         
-        <% @personalty_types[4..7].each do |p| %>
-        <div class="large-3 columns text-center">
-          <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
-          <div class="panel text-center" style="font-size: 12px"><%= p.title %></div>
-        </div>
-        <% end %>
-      
-      </div>
+        </li>
 
-      <div class="row">
+        <li>
+          
+          <% @personalty_types[8..11].each do |p| %>
+          <div class="large-3 columns personality-main">
+            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <div class=" text-center" ><%= p.title %></div>
+          </div>
+          <% end %>
         
-        <% @personalty_types[8..11].each do |p| %>
-        <div class="large-3 columns text-center">
-          <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
-          <div class="panel text-center" style="font-size: 12px"><%= p.title %></div>
-        </div>
-        <% end %>
-      
-      </div>
+        </li>
 
 
-      <div class="row">
+        <li>
+          
+          <% @personalty_types[12..15].each do |p| %>
+          <div class="large-3 columns personality-main">
+            <a href="<%= personality_type_path(p) %>"><img  src="/img/avatar.gif" /></a>
+            <div class=" text-center"><%= p.title %></div>
+          </div>
+          <% end %>
         
-        <% @personalty_types[12..15].each do |p| %>
-        <div class="large-3 columns text-center">
-          <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
-          <div class="panel text-center" style="font-size: 12px"><%= p.title %></div>
-        </div>
-        <% end %>
-      
-      </div>
-     
+        </li>
+      </ul>
 
     </div>
-  </div> 
- 
+  </div><br/>

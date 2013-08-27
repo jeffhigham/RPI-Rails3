@@ -54,6 +54,7 @@ $default-float: left;
 $body-bg: #fff;
 // $body-font-color: #000;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -1340,5 +1341,13 @@ $alert-color: #F88914;
   "foundation/components/thumbs",
   "foundation/components/tooltips",
   "foundation/components/dropdown";
+
+// http://compass-style.org/examples/compass/layout/sticky-footer/
+// https://github.com/Compass/compass-rails
+
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+ 
+@include sticky-footer(150px, "#layout", "#layout_footer", "#footer");
 
 @import 'foundation-icons';

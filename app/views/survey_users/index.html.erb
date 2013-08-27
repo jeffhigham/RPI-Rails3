@@ -25,18 +25,19 @@
 				<th><a href="<%= @csv_url %>"<%= params[:search] %>><i class="general foundicon-address-book" style="font-size: 2.5em; color:#2EC12E"></i></a>
 				</th>
 			</tr>
-		<% @survey_users.each do |user| %>
-			<tr>
-				<td><%= user.id %></td>
-				<td><%= user.personality_type %></td>
-				<td><%= user.first_name %></td>
-				<td><%= user.last_name %></td>
-				<td><%= link_to user.email, "mailto:#{user.email}" %></td>
-				<td><%= user.phone %></td>
-				<td><%= user.gender %></td>
-				<td><%= user.account_created %></td>
-				<th><%= link_to "Show", survey_user_path(user), :class => "tiny radius button" %></th>
-			</tr>
-		<% end %>
+			<% @survey_users.each do |user| %>
+				<tr>
+					<td><%= user.id %></td>
+					<td><%= user.personality_type %></td>
+					<td><%= user.first_name %></td>
+					<td><%= user.last_name %></td>
+					<td><%= link_to user.email, "mailto:#{user.email}" %></td>
+					<td><%= user.phone %></td>
+					<td><%= user.gender %></td>
+					<td><%= user.account_created %></td>
+					<th><%= link_to "Show", survey_user_path(user), :class => "tiny radius button" %></th>
+				</tr>
+			<% end %>
+		</table>
 	</div>
 </div><br/>
