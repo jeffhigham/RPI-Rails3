@@ -14,15 +14,15 @@
 	<div class="large-12  columns">
 		<table style="width:100%">
 			<tr>
-				<th>User ID</th>
+				<th>ID</th>
 				<th>Personality</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email Address</th>
-				<th>Phone Number</th>
+				<th>First</th>
+				<th>Last</th>
+				<th>Email</th>
+				<th>Phone</th>
 				<th>Gender</th>
 				<th>Created</th>
-				<th><a href="<%= @csv_url %>"<%= params[:search] %>><i class="general foundicon-address-book" style="font-size: 2.5em; color:#2EC12E"></i></a>
+				<th colspan="2" class="text-center"><a href="<%= @csv_url %>"<%= params[:search] %>><i class="general foundicon-address-book" style="font-size: 2.5em; color:#2EC12E"></i></a>
 				</th>
 			</tr>
 			<% @survey_users.each do |user| %>
@@ -35,7 +35,8 @@
 					<td><%= user.phone %></td>
 					<td><%= user.gender %></td>
 					<td><%= user.account_created %></td>
-					<th><%= link_to "Show", survey_user_path(user), :class => "tiny radius button" %></th>
+					<td><%= link_to "Show", survey_user_path(user), :class => "tiny radius button" %></td>
+					<td><%= link_to 'Destroy', survey_user_path(user), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "tiny radius button alert" %></td>
 				</tr>
 			<% end %>
 		</table>

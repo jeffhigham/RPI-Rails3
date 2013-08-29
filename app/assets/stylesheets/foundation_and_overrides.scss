@@ -1345,7 +1345,7 @@ $alert-color: #F88914;
 // http://compass-style.org/examples/compass/layout/sticky-footer/
 // https://github.com/Compass/compass-rails
 
-@import "compass/reset.scss";
+//@import "compass/reset.scss";
 @import "compass/layout.scss";
  
 @include sticky-footer(150px, "#layout", "#layout_footer", "#footer");

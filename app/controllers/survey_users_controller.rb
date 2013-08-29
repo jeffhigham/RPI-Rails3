@@ -32,7 +32,13 @@ class SurveyUsersController < ApplicationController
 	    	send_data @survey_users.to_csv
 	    }
 	    # format.xls # { send_data @products.to_csv(col_sep: "\t") }
+  		end
   	end
+		
+	def destroy
+		survey_user = SurveyUser.find(params[:id])
+		survey_user.destroy
+		redirect_to survey_users_path, :notice => "Successfully deleted user."
 	end
 
 end
