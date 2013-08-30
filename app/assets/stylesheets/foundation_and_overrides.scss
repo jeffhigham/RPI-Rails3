@@ -1348,6 +1348,6 @@ $alert-color: #F88914;
 //@import "compass/reset.scss";
 @import "compass/layout.scss";
  
-@include sticky-footer(150px, "#layout", "#layout_footer", "#footer");
+@include sticky-footer(170px, "#layout", "#layout_footer", "#footer");
 
 @import 'foundation-icons';

@@ -10,11 +10,20 @@
 		<h4 style='font-family: "Trajan Pro"; letter-spacing: 4px;'>~<%= @personality_type.title %>~</h4><hr/>
 	</div>
 </div>
+
 <div class="row">
 	<div class="large-8 large-centered columns">
-		<%= @personality_type.message.html_safe %><hr/>
+		<%= @personality_type.public_description.html_safe %>
 	</div>
 </div><br/>
+<% if survey_user || current_user %>
+  <div class="row">
+    <div class="large-8 large-centered columns">
+      <%= @personality_type.private_description.html_safe %><hr/>
+    </div>
+  </div><br/>
+<% end %>
+
 <div class="row">
 	<div class="large-8 large-centered columns text-center">
 		<a class="radius button"  style="background-color: #3B5998" href="#" onclick="window.open(
