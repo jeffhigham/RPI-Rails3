@@ -1,12 +1,11 @@
   <div class="row" >
-    <div class="large-8 columns">
-      <div class="flex-video">
-        <iframe src="http://www.youtube.com/embed/bB-bs0Y7kmc?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <div class="large-10 large-centered columns">
+      <div class="flex-video widescreen">
+        <iframe src="http://www.youtube.com/embed/zTaSGyBVH-A?controls=0&amp;rel=0&amp;loop=1&amp;autoplay=1&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=0&amp;fs=1" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 
-    <div class="large-4 columns hide-for-small">
-      
+<!--     <div class="large-4 columns hide-for-small">
       <div class="row text-center"><br/><br/>
       <%= link_to "Take The RPI Now!", take_survey_path, :class => "large radius button success" %>
       </div>
@@ -20,7 +19,7 @@
           </div>
       </div>
 
-    </div>
+    </div> -->
 
   </div>
 
@@ -35,15 +34,15 @@
 
    <div class="row hide-for-small" >
     
-    <div class="large-12 large-centered columns text-center">
-      <h4 style='font-family: "Trajan Pro"; letter-spacing: 4px; '>WHICH RAW PERSONALITY DO YOU HAVE?</h4><br/>
+    <div class="large-12 large-centered columns text-center"><br/>
+      <h4 style='font-family: "Trajan Pro"; letter-spacing: 4px; '>WHICH RAW PERSONALITY DO <span style="font-size: 1.5em">YOU</span> HAVE?</h4><br/><h3><a href="/take_survey" class="small radius button success"><i class="general foundicon-idea"></i>&nbsp;Find Out!</a></h3><br/>
 
       <ul data-orbit data-options="timer_speed:5000; slide_number: false; bullets: false; timer: true;">
         <li>
           
           <% @personalty_types[0..3].each do |p| %>
           <div class="large-3 columns personality-main" >
-            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
             <div  style="font-size: 10px"><%= p.title %></div>
           </div>
           <% end %>
@@ -54,7 +53,7 @@
           
           <% @personalty_types[4..7].each do |p| %>
           <div class="large-3 columns personality-main">
-            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
             <div class="text-center"><%= p.title %></div>
           </div>
           <% end %>
@@ -65,7 +64,7 @@
           
           <% @personalty_types[8..11].each do |p| %>
           <div class="large-3 columns personality-main">
-            <a href="<%= personality_type_path(p) %>"><img src="/img/avatar.gif" /></a>
+            <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
             <div class=" text-center" ><%= p.title %></div>
           </div>
           <% end %>
@@ -77,7 +76,7 @@
           
           <% @personalty_types[12..15].each do |p| %>
           <div class="large-3 columns personality-main">
-            <a href="<%= personality_type_path(p) %>"><img  src="/img/avatar.gif" /></a>
+            <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
             <div class=" text-center"><%= p.title %></div>
           </div>
           <% end %>
