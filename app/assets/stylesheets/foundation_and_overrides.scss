@@ -54,7 +54,8 @@ $default-float: left;
 $body-bg: #fff;
 // $body-font-color: #000;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;
+//$body-font-family: "Lucida Sans Unicode","Lucida Grande",Garuda,sans-serif;
+$body-font-family: "Gill Sans Light", "Gill Sans MT Light", Calibri, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -164,6 +165,7 @@ $alert-color: #F88914;
 // Control header font styles
 
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Gill Sans Light" "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;

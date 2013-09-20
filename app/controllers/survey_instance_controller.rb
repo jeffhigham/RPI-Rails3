@@ -23,7 +23,8 @@ class SurveyInstanceController < ApplicationController
     	:total_T => 0,
     	:total_F => 0,
     	:total_J => 0,
-    	:total_P => 0
+    	:total_P => 0,
+      :survey_answers => nil
     }
     total_questions = Survey.find(survey_id).questions.count
     if (params['questions'].blank?)
@@ -39,6 +40,7 @@ class SurveyInstanceController < ApplicationController
           survey_totals[:"total_#{answer[1]}"] += 1
         end
       end
+      survey_totals[:survey_answers] = params['questions']
 
       # logger.info "Survey Totals: #{survey_totals.to_s}"
       survey_result = SurveyResult.new(survey_totals)

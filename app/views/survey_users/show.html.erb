@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="large-8 large-centered columns">
+	<div class="large-10 large-centered columns">
 		<p> Name:
 			<%= "#{@survey_user.first_name} #{@survey_user.last_name}" %>
 		</P>
@@ -10,12 +10,13 @@
 </div>
 
 <div class="row">
-	<div class="large-8 large-centered columns">
+	<div class="large-10 large-centered columns">
 		<table>
 			<tr>
 				<th>Indicator</th>
 				<th>Title</th>
 				<th>Date</th>
+				<th>Answers</th>
 			</tr>
 
 		<% @survey_user.survey_results.each do |result| %>
@@ -23,6 +24,12 @@
 				<td><%= result.personality_type.name %></td>
 				<td><%= link_to result.personality_type.title, personality_type_path(result.personality_type) %></td>
 				<td><%= result.personality_type.created_at %></td>
+				<td>
+					<%= (1..70).map{|i| "#{i} = #{result.survey_answers[i.to_s]}, "} %><br/><br/>
+					<%=
+						"total_E: #{result.total_E} , total_I: #{result.total_I}, total_S: #{result.total_S}, total_N: #{result.total_N}, total_T: #{result.total_T}, total_F: #{result.total_F}, total_J: #{result.total_J}, total_P: #{result.total_P}"
+					%>
+				</td>
 			</tr>
 		<% end %>
 		</table>

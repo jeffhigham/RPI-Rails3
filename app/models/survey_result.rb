@@ -3,6 +3,7 @@ class SurveyResult < ActiveRecord::Base
 	 				:total_F, :total_J, :total_P, :survey_answers, :survey_user_id, :survey_id
 	validates_presence_of :total_E, :total_I, :total_S, :total_N, :total_T,
 	 				:total_F, :total_J, :total_P, :survey_user_id, :survey_id
+	serialize :survey_answers, Hash
 	belongs_to :survey_user
 	belongs_to :survey
 
