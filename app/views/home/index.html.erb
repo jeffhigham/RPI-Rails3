@@ -17,27 +17,26 @@
   </div>
 
 </div> -->
-<div>
-  <div  style="background-color: #EAEEEE; border-top:2px solid #FFF; border-bottom: 1px solid #FFF">
+     <div style="margin-top:240px; left:0; right:0; position:absolute; text-align: center; z-index:15">
+      <a href="/take_survey"><img src="/img/home/find-out.png" /></a>
+    </div>
+
+  <div  style=" height: 265px; background-color: #EAEEEE; border-top:2px solid #FFF; border-bottom: 1px solid #FFF">
+    
     <div class="row">
       <div class="large-12 columns text-center">
-        <img src="/img/what-is-your-rp.png"/>
+        <img src="/img/what-is-your-rp.png" style="margin-top: 65px"/>
       </div>
     </div>
+
+  </div>
+
     <div class="row">
-      <div class="large-6 large-centered columns text-center">
-        <a href="/take_survey""><img src="/img/home/find-out.png" /></a>
+      <div class="large-12 large-centered columns" style="background-color: #D7DEDE; width: 960px; height: 18px">
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="large-12 large-centered columns" style="background-color: #D7DEDE; width: 960px; height: 18px">
-    </div>
-  </div>
-</div>
-
-<div class="row text-center">
+<div class="row text-center" style="margin-top: 75px">
       <% @personalty_types[0..3].each do |p| %>
       <div class="large-3 columns personality-main" >
         <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>

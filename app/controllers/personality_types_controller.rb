@@ -1,4 +1,5 @@
 class PersonalityTypesController < ApplicationController
+  layout 'profile'
   before_filter :authorize, :except => [:show]
   #before_action :set_personality_type, :only => [:show, :edit, :update, :destroy]
   # before_action :set_survey
