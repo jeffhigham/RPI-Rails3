@@ -1,46 +1,28 @@
 <% title "RPI | Bigger Gains International" %>
 
 
-    <!-- mobile screen -->
-<!--  <div class="row">
-  <div class="large-12 columns show-for-small">
-    <a href="/take_survey" class="radius button success" style="width: 100%">Take The RPI Now!</a>
-  </div>
- </div> -->
- 
-<!-- personality types -->
-
-<!--  <div class="row hide-for-small" >
-  
-  <div class="large-12 large-centered columns text-center"><br/>
-    <h2 style='letter-spacing: 4px; font-size: 3em; font-weight: normal'>What's your Raw Personality?</h2><br/><h3><a href="/take_survey" class="small radius button success"><i class="general foundicon-idea"></i>&nbsp;Find Out!</a></h3><br/>
+   <div class="floating-fid-out">
+    <a href="/take_survey"><img src="/img/home/find-out.png" /></a>
   </div>
 
-</div> -->
-     <div style="margin-top:240px; left:0; right:0; position:absolute; text-align: center; z-index:15">
-      <a href="/take_survey"><img src="/img/home/find-out.png" /></a>
-    </div>
-
-  <div  style=" height: 265px; background-color: #EAEEEE; border-top:2px solid #FFF; border-bottom: 1px solid #FFF">
-    
+  <div class="rp-question">
     <div class="row">
       <div class="large-12 columns text-center">
-        <img src="/img/what-is-your-rp.png" style="margin-top: 65px"/>
+        <img src="/img/what-is-your-rp.png"/>
       </div>
     </div>
-
   </div>
 
     <div class="row">
-      <div class="large-12 large-centered columns" style="background-color: #D7DEDE; width: 960px; height: 18px">
+      <div class="large-12 large-centered columns rp-question-bottom-div">
       </div>
     </div>
 
-<div class="row text-center" style="margin-top: 75px">
+<div class="row text-center">
       <% @personalty_types[0..3].each do |p| %>
       <div class="large-3 columns personality-main" >
         <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
-        <div  style="font-size: 10px"><%= p.title %></div>
+        <div><%= p.title %></div>
       </div>
       <% end %>
 </div>
@@ -49,7 +31,7 @@
       <% @personalty_types[4..7].each do |p| %>
       <div class="large-3 columns personality-main" >
         <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
-        <div  style="font-size: 10px"><%= p.title %></div>
+        <div><%= p.title %></div>
       </div>
       <% end %>
 </div>
@@ -58,7 +40,7 @@
       <% @personalty_types[8..11].each do |p| %>
       <div class="large-3 columns personality-main" >
         <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
-        <div  style="font-size: 10px"><%= p.title %></div>
+        <div><%= p.title %></div>
       </div>
       <% end %>
 </div>
@@ -67,7 +49,7 @@
       <% @personalty_types[12..15].each do |p| %>
       <div class="large-3 columns personality-main" >
         <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
-        <div  style="font-size: 10px"><%= p.title %></div>
+        <div><%= p.title %></div>
       </div>
       <% end %>
 </div>
