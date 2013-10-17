@@ -31,9 +31,10 @@
   font-size: 11px;
   text-transform:uppercase;
   font-weight: bold;
-  
-  padding: 1.25em;
+  color: #3F515D;
+  padding: 1.5em;
 }
+
 .personality-main a img {
   margin: auto;
   margin-bottom: 1.1em;
@@ -79,20 +80,20 @@
   margin-top: 80px;
 }
 
-.top-nav a img, .bottom-nav a img {
-  opacity:0.7;
-  filter:alpha(opacity=70);
+.top-nav a img, .bottom-nav a img, .personality-main a img {
+  opacity:0.5;
+  filter:alpha(opacity=50);
   transition: opacity .50s ease-in-out;
   -moz-transition: opacity .50s ease-in-out;
   -webkit-transition: opacity .50s ease-in-out;
 }
 
-.top-nav a img:hover, .bottom-nav a img:hover {
+.top-nav a img:hover, .bottom-nav a img:hover, .personality-main a img:hover {
   opacity:1.0;
   filter:alpha(opacity=100);
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .05s ease-in-out;
+  -moz-transition: opacity .05s ease-in-out;
+  -webkit-transition: opacity .05s ease-in-out;
 }
 
 .top-logo {
@@ -116,7 +117,7 @@
   margin-top: 65px;
 }
 
-.floating-fid-out {
+.floating-find-out  {
   margin-top:240px;
   left:0;
   right:0;
@@ -125,7 +126,27 @@
   z-index:15;
 }
 
-.floating-fid-out img {
+.floating-find-your-rpi{
+  margin-top:96px;
+  left:0;
+  right:0;
+  position:absolute;
+  text-align: center;
+  z-index:15;
+}
+
+.floating-personality-title {
+  margin-top:555px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  position:absolute;
+  text-align: center;
+  z-index:15;
+}
+
+
+.floating-find-out img, .floating-find-your-rpi img {
   opacity:0.95;
   filter:alpha(opacity=95);
   transition: opacity .50s ease-in-out;
@@ -133,7 +154,7 @@
   -webkit-transition: opacity .50s ease-in-out;
 }
 
-.floating-fid-out img:hover {
+.floating-find-out img:hover, .floating-find-your-rpi img:hover {
   opacity:1.0;
   filter:alpha(opacity=100);
   transition: opacity .25s ease-in-out;
@@ -153,25 +174,16 @@
   font-size: 12px;
 }
 
-.personality-main a img {
-  opacity:0.6;
-  filter:alpha(opacity=60);
-  transition: opacity .50s ease-in-out;
-  -moz-transition: opacity .50s ease-in-out;
-  -webkit-transition: opacity .50s ease-in-out;
+#layout_footer {
+  background-color: #444F56
 }
 
-.personality-main a img:hover {
-  opacity:1.0;
-  filter:alpha(opacity=100);
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+.bottom-nav {
+  margin-top: 40px;
+  color: #fff;
 }
-
-#footer {
-  margin-top: 30px;
-  background-color: #444F56;
+.bottom-nav a:hover {
+  color: #fff;
 }
 
 #privacy_policy{
