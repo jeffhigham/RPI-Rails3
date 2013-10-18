@@ -1,3 +1,14 @@
+.Novecentowide-DemiBold { 
+  font-family: Novecentowide-DemiBold;
+  font-weight: lighter;
+  font-style: normal;
+}
+.Novecentowide-Book { 
+  font-family: Novecentowide-Book;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .orbit-container{
   background-color: inherit;
 }
@@ -80,7 +91,8 @@
   margin-top: 80px;
 }
 
-.top-nav a img, .bottom-nav a img, .personality-main a img {
+.top-nav a img, .bottom-nav a img, .personality-main a img,
+.floating-left-arrow a img, .floating-right-arrow a img {
   opacity:0.5;
   filter:alpha(opacity=50);
   transition: opacity .50s ease-in-out;
@@ -88,7 +100,8 @@
   -webkit-transition: opacity .50s ease-in-out;
 }
 
-.top-nav a img:hover, .bottom-nav a img:hover, .personality-main a img:hover {
+.top-nav a img:hover, .bottom-nav a img:hover, .personality-main a img:hover,
+.floating-left-arrow a img:hover, .floating-right-arrow a img:hover  {
   opacity:1.0;
   filter:alpha(opacity=100);
   transition: opacity .05s ease-in-out;
@@ -135,16 +148,32 @@
   z-index:15;
 }
 
+.floating-personality-title-background {
+  margin-top:-50px;
+  left:0;
+  right:0;
+  position:absolute;
+  text-align: center;
+  z-index:14;
+}
+
 .floating-personality-title {
-  margin-top:555px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
+  margin-top:-12px;
+  left:0;
+  right:0;
   position:absolute;
   text-align: center;
   z-index:15;
 }
 
+.floating-personality-title span {
+  font-weight: bold;
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #3F515D;
+  font-family: Novecentowide-Book;
+}
 
 .floating-find-out img, .floating-find-your-rpi img {
   opacity:0.95;
@@ -163,11 +192,40 @@
   width: 315px;
 }
 
+.floating-left-arrow {
+
+  margin-top:95px;
+  left: 0;
+  right:470px;
+  position:absolute;
+  text-align: center;
+  z-index:15;
+
+}
+
+.floating-right-arrow {
+
+  margin-top:95px;
+  left:470px;
+  right:0;
+  position:absolute;
+  text-align: center;
+  z-index:15;
+
+}
+
 .rp-question-bottom-div {
   background-color: #D7DEDE;
   width: 960px;
   height: 18px;
   margin-bottom: 75px;
+}
+
+.public_description {
+  font-family: "Myriad Pro";
+  font-size: 18px;
+  text-align: justify;
+
 }
 
 .personality-main {

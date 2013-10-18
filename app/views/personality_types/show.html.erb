@@ -1,28 +1,30 @@
 <% title "RPI | #{@personality_type.title}" %>
-<!-- <br/>
-<div class="row">
-  <div class="large-4 large-centered columns text-center">
-    <img src="/img/types_400/<%= @personality_type.name %>.png" />
-  </div>
-</div><br/>
-<div class="row">
-	<div class="large-8 large-centered columns text-center">
-		<h4 style='font-family: "Trajan Pro"; letter-spacing: 4px;'>~<%= @personality_type.title %>~</h4><hr/>
-	</div>
-</div> -->
-
 
 <div  style="background-color: #EAEEEE; border-top:2px solid #FFF; border-bottom: 1px solid #FFF; height:137px; margin-bottom:50px">
+
+    <!-- Find Your RPI Button -->
+    <div class="floating-personality-title-background">
+        <img src="/img/profile/title-banner.png" />
+    </div>
+    <!-- End Button -->
+
+        <!-- Find Your RPI Button -->
+    <div class="floating-personality-title">
+        <span><%= @personality_type.title %></span>
+    </div>
+    <!-- End Button -->
+
     <!-- Find Your RPI Button -->
     <div class="floating-find-your-rpi">
         <a href="/take_survey"><img src="/img/profile/find-your-rpi.png" /></a>
     </div>
     <!-- End Button -->
+
 </div>
 
 <div class="row">
 	<div class="large-8 large-centered columns">
-		<%= @personality_type.public_description.html_safe %>
+		<span class="public_description"><%= @personality_type.public_description.html_safe %></span>
 	</div>
 </div><br/>
 <% if survey_user || current_user %>
