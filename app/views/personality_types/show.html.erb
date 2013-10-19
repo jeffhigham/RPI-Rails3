@@ -3,13 +3,13 @@
 <div  style="background-color: #EAEEEE; border-top:2px solid #FFF; border-bottom: 1px solid #FFF; height:137px; margin-bottom:50px">
 
     <!-- Find Your RPI Button -->
-    <div class="floating-personality-title-background">
+    <div class="floating-personality-title-background hide-for-small">
         <img src="/img/profile/title-banner.png" />
     </div>
     <!-- End Button -->
 
         <!-- Find Your RPI Button -->
-    <div class="floating-personality-title">
+    <div class="floating-personality-title hide-for-small">
         <span><%= @personality_type.title %></span>
     </div>
     <!-- End Button -->
@@ -19,7 +19,11 @@
         <a href="/take_survey"><img src="/img/profile/find-your-rpi.png" /></a>
     </div>
     <!-- End Button -->
-
+    <div class="row">
+      <div class="large-12 large-centered columns text-center fixed-personality-title">
+        <span><%= @personality_type.title %></span>
+      </div>
+    </div>
 </div>
 
 <div class="row">

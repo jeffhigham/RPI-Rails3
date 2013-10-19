@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+	layout 'survey'
   def new
 	end
 

@@ -1,35 +1,47 @@
-<br/>
-<div id="layout_footer">
+  <div id="layout_footer">
 
-<div id="footer">
-  <!-- Footer Large -->
-  <footer style="background-color: #444F56">
-    <div class="row">
-      <div class="large-6 columns bottom-nav" style="margin-top: 30px">
-        <ul class="inline-list left">
-          <li><a href="/take_survey"><img src="/img/footer/get-started.png"/></a></li>
-          <li><span>&copy; BGI, LLC All Rights Reserved</span></li>
-        </ul>
-      </div>
-      <div class="large-6 columns hide-for-small bottom-nav">
-        <ul class="inline-list right">
-          <li><a href="#" data-reveal-id="privacy_policy">PRIVACY</a></li>
-          <li><a href="http://www.facebook.com/kenn.sullivan"><img src="/img/footer/facebook.png"/></a></li>
-          <li><a href="http://twitter.com/kennsullivan"><img src="/img/footer/twitter.png"/></a></li>
-          <li><a href="http://www.linkedin.com/pub/kenn-sullivan/2/191/996"><img src="/img/footer/linkedin.png"/></a></li>
-          <li><a href="http://www.youtube.com/watch?v=EkMXqdjkxjM"><img src="/img/footer/youtube.png"/></a></li>
-        </ul>
-      </div>
+    <div id="footer">
+
+      <!-- Footer Large -->
+      <footer class="hide-for-small">
+        <div class="row">
+          <div class="large-6 columns bottom-nav" style="margin-top: 30px">
+            <ul class="inline-list left">
+              <li><a href="/take_survey"><img src="/img/footer/get-started.png"/></a></li>
+              <li><span style="margin-top: 6px">&copy; BGI, LLC All Rights Reserved</span></li>
+            </ul>
+          </div>
+          <div class="large-6 columns bottom-nav">
+            <ul class="inline-list right">
+              <li><a href="#" data-reveal-id="privacy_policy" style="margin-top:6px">PRIVACY</a></li>
+              <li><a href="http://www.facebook.com/kenn.sullivan"><img src="/img/footer/facebook.png"/></a></li>
+              <li><a href="http://twitter.com/kennsullivan"><img src="/img/footer/twitter.png"/></a></li>
+              <li><a href="http://www.linkedin.com/pub/kenn-sullivan/2/191/996"><img src="/img/footer/linkedin.png"/></a></li>
+              <li><a href="http://www.youtube.com/watch?v=EkMXqdjkxjM"><img src="/img/footer/youtube.png"/></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer Large -->
+
+      <!-- Footer Small -->
+      <footer class="show-for-small">
+        <div class="row">
+          <div class="large-12 large-centered columns text-center bottom-nav" style="margin-top: 50px">
+              <a href="/take_survey"><img src="/img/footer/get-started.png"/></a>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer Small -->
 
     </div>
-  </footer>
-</div>
   </div> <!-- layout footer -->
+
 </div> <!-- layout -->
 
-<div id="privacy_policy" class="reveal-modal">
-  <%= render :partial => 'layouts/privacy' %>
-</div>
-<a class="close-reveal-modal">&#215;</a>
+  <div id="privacy_policy" class="reveal-modal hide-for-small">
+    <%= render :partial => 'layouts/privacy' %>
+  </div>
+  <a class="close-reveal-modal hide-for-small">&#215;</a>
 </body>
 </html>
