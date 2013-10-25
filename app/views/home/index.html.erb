@@ -1,30 +1,34 @@
 <% title "RPI | Bigger Gains International" %>
 
+<div class="floating-find-out">
+  <a href="/take_survey"><img src="/img/home/find-out.png" /></a>
+</div>
 
-   <div class="floating-find-out">
-    <a href="/take_survey"><img src="/img/home/find-out.png" /></a>
-  </div>
-
-  <div class="rp-question">
-    <div class="row">
-      <div class="large-12 columns text-center">
-        <img src="/img/what-is-your-rp.png"/>
-      </div>
+<div class="rp-question">
+  <div class="row">
+    <div class="large-12 columns text-center">
+      <img src="/img/what-is-your-rp.png"/>
     </div>
   </div>
+</div>
 
-    <div class="row">
-      <div class="large-12 large-centered columns rp-question-bottom-div">
-      </div>
-    </div>
+<div class="row hide-for-small">
+  <div class="large-12 large-centered columns rp-question-bottom-div">
+  </div>
+</div>
+
+<div class="row show-for-small">
+  <div class="large-12 large-centered columns rp-question-bottom-div-mobile">
+  </div>
+</div>
 
 <div class="row text-center">
-      <% @personalty_types[0..3].each do |p| %>
-      <div class="large-3 columns personality-main" >
-        <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
-        <div><%= p.title %></div>
-      </div>
-      <% end %>
+  <% @personalty_types[0..3].each do |p| %>
+    <div class="large-3 columns personality-main" >
+      <a href="<%= personality_type_path(p) %>"><img src="/img/types_100/<%= p.name %>.png" /></a>
+      <div><%= p.title %></div>
+    </div>
+  <% end %>
 </div>
 
 <div class="row text-center">
