@@ -4,4 +4,4 @@ jQuery ->
     </div>'
   $('.rpi-video a').on 'click', (event) ->
     event.preventDefault()
-    $(@).replaceWith(video)
+    $('.rpi-video').html(video)

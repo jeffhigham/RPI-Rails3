@@ -40,18 +40,13 @@
 <% end %>
 
 <div class="row">
-	<div class="large-8 large-centered columns text-center">
-		<a class="radius button"  style="background-color: #3B5998" href="#" onclick="window.open(
+	<div class="large-8 large-centered columns text-center social">
+		<a  href="#" onclick="window.open(
       'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
       'facebook-share-dialog', 
       'width=626,height=436'); 
     return false;">
-  <i class="social foundicon-facebook"></i>&nbsp;Share On Facebook!</a>
-  <a class="radius button" style="background-color: #4099FF" href="https://twitter.com/share"><i class="social foundicon-twitter"></i>&nbsp;Share On Twitter!</a>
-  <% if survey_user %>
-  	<%= link_to 'Done!', logout_path, :class => "radius button success" %>
-  <% else %>
-    <a class="radius button success" href="/"><i class="general foundicon-idea"></i>&nbsp;Find Your RPI!</a>
-  <% end %>
+  <img src="/img/profile/facebook-share.png" /></a>
+  <a href="https://twitter.com/share"><img src="/img/profile/twitter-share.png" /></a>
 	</div>
-</div>
+</div><br />
