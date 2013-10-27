@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-  
+  layout 'survey'
   before_filter :authorize
 
   def index

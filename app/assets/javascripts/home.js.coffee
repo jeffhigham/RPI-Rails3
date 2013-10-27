@@ -5,3 +5,4 @@ jQuery ->
   $('.rpi-video a').on 'click', (event) ->
     event.preventDefault()
     $('.rpi-video').html(video)
+  
